@@ -1,10 +1,8 @@
 #include "TIM16.h"
 
 void initTIM16(void) {
-
+    // set PSC
     TIM16->PSC = 19;
-    // configure PWM mode
-    TIM16->CCR1 |= 0x7FFF; // on before 1, off until 2
 
     // configure output mode
     TIM16->CCMR1 &= ~(1 << 16); // clear OCM1[3]

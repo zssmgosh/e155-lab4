@@ -8,7 +8,8 @@
 #include "STM32L432KC_GPIO.h"
 #include "STM32L432KC_FLASH.h"
 
-#define PIN_NUM     6
+#define PIN_NUM     6 // pin PA6
+
 // Pitch in Hz, duration in ms
 const int notes[][2] = {
 {659,	125},
