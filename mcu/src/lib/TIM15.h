@@ -23,7 +23,7 @@ typedef struct
 {
   __IO uint32_t CR1;          /*!< TIM15 control register 1,                                                Address offset: 0x00 */
   __IO uint32_t CR2;          /*!< TIM15 control register 2,                                                Address offset: 0x04 */
-  __IO uint32_t SMCR;         /*!< TIM15 slav mode control register,                                        Address offset: 0x08 */
+  __IO uint32_t SMCR;         /*!< TIM15 slave mode control register,                                       Address offset: 0x08 */
   __IO uint32_t DIER;         /*!< TIM15 DMA/interrupt enable register,                                     Address offset: 0x0C */
   __IO uint32_t SR;           /*!< TIM15 status register,                                                   Address offset: 0x10 */
   __IO uint32_t EGR;          /*!< TIM15 event generation register,                                         Address offset: 0x14 */

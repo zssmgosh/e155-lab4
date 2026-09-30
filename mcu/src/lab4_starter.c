@@ -11,6 +11,7 @@
 #define PIN_NUM     6 // pin PA6
 
 // Pitch in Hz, duration in ms
+//fur elise
 const int notes[][2] = {
 {659,	125},
 {623,	125},
@@ -122,6 +123,49 @@ const int notes[][2] = {
 {440,	500},
 {  0,	0}};
 
+// jigglypuff song
+const int newNotes[][2] = {
+  {587,1059}, 
+  {880,353}, 
+  {741,353}, 
+  {587,353},
+  {659,1059}, 
+  {741,353}, 
+  {784,706},
+  {741,1059}, 
+  {659,353}, 
+  {741,706},
+  {587,2118},
+  {587,1059}, 
+  {880,353}, 
+  {741,353}, 
+  {587,353},
+  {659,1059}, 
+  {741,353}, 
+  {784,706},
+  {741,4235},
+  {587,1059}, 
+  {880,353}, 
+  {741,353}, 
+  {587,353},
+  {659,1059}, 
+  {741,353}, 
+  {784,706},
+  {741,1059}, 
+  {659,353}, 
+  {741,706},
+  {587,2118},
+  {587,1059}, 
+  {880,353}, 
+  {741,353}, 
+  {587,353},
+  {659,1059}, 
+  {741,353}, 
+  {784,706},
+  {741,4235},
+  {0,250}
+};
+
 int main(void) {
    configureFlash();
    configureClock();
@@ -137,7 +181,12 @@ int main(void) {
    GPIO->AFRL |= (0b1110 << 24); // configure to TIM16 CH1
 
    for (int i = 0; i < (sizeof(notes)/sizeof(notes[0])); i++) {
-       configureTIM16(notes[i][0]); // start pitching
-       configureTIM15(notes[i][1]); // start duration
+      configureTIM16(notes[i][0]); // start pitching
+      configureTIM15(notes[i][1]); // start duration
+   }
+
+   for (int i = 0; i < (sizeof(newNotes)/sizeof(newNotes[0])); i++) {
+       configureTIM16(newNotes[i][0]); // start pitching
+       configureTIM15(newNotes[i][1]); // start duration
    }
 }
